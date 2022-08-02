@@ -1,0 +1,22 @@
+<div class="container p-3">
+  <div *ngIf="isLoading" class="d-flex justify-content-center">
+    <div class="spinner-border text-primary" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+  </div>
+
+  <div *ngIf="!isLoading">
+    <div class="row">
+      <app-article-card
+        *ngFor="let article of articles; index as i"
+        [article]="article"
+        class="d-md-flex d-sm-block col-sm-12 col-md-4 col-lg-3 p-2"
+      ></app-article-card>
+    </div>
+
+    <app-pagination
+      [currentPage]="pageNumber"
+      (changePage)="onGetArticles($event)"
+    ></app-pagination>
+  </div>
+</div>

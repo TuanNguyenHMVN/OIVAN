@@ -1,1 +1,52 @@
 /* You can add global styles to this file, and also import other style files */
+
+body {
+  font-family: "Noto Serif", serif;
+  background-image: url("./assets/images/wood_background.jpg");
+}
+
+.article__item {
+  background-color: red;
+}
+
+.container {
+  background-color: #fff;
+}
+
+.card {
+  .card-wrapper {
+    flex: 1;
+    .card-img-top {
+      height: 200px;
+      width: 100%;
+      flex-shrink: 0;
+      object-fit: cover;
+    }
+
+    .card-content {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      .article-title {
+        flex: 1;
+      }
+    }
+    .article-card__description {
+      flex-shrink: 0;
+      flex: 1;
+    }
+  }
+}
+
+.article-detail {
+  .article-detail-cover-image {
+    height: 200px;
+    width: 100%;
+    flex-shrink: 0;
+    object-fit: contain;
+  }
+}
+
+.pointer {
+  cursor: pointer;
+}

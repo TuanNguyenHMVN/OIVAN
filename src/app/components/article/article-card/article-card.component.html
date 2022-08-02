@@ -1,0 +1,25 @@
+<div class="card d-flex flex-column">
+  <div class="pointer card-wrapper d-flex flex-column" (click)="onViewDetail()">
+    <img src="{{ item.coverImageUrl }}" class="card-img-top" />
+    <div class="card-content">
+      <div class="card-body d-flex flex-column pointer">
+        <div class="article-title">
+          <strong>{{ item.title }}</strong>
+        </div>
+        <div class="article-subtitle">
+          <small>
+            <a href="{{ item.url }}" target="_blank">
+              {{ item.subtitle || defaultSubtitle }}
+            </a>
+          </small>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-footer d-flex flex-column">
+      <div class="article-card__description text-muted text-center">
+        <small> {{ item.description }} </small>
+      </div>
+    </div>
+  </div>
+</div>
